@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .include{
+            width:100px;
+            height:20px;
+            word-break: keep-all;
+            
+            
+            
+        }
+        @keyframes dong{
+            0%{transform: translate(0px,0px);}
+            50%{transform: translate(-100px,0px);}
+            100%{transform: translate(0px,0px);}
+        }
+        .top{
+            overflow: hidden;
+            animation:dong 10s linear infinite;
+        }
+    </style>
+</head>
+<body>
+<div class="include">
+    <p class="top">文字如果超出了自动向左滚动</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .scroll{
+            position: relative;
+            left:20%;
+            top:200px;
+            display:inline-block;
+            background-color:darksalmon;
+            height:26px;
+            cursor:pointer;
+            overflow: hidden;
+        }
+        .scroll ul{
+            padding: 0px 60px;
+            position: relative;
+            line-height: 26px;
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+<div class="scroll">
+    <ul class="list-unstyled">
+        <li>苹果</li>
+        <li>橘子</li>
+        <li>香蕉</li>
+        <li>菠萝</li>
+        <li>芒果</li>
+        <li>黄桃</li>
+    </ul>
+</div>
+<script src="jquery-1.12.1.min.js"></script>
+<script>
+$(function(){
+    //每隔1s循环滚动
+    var a=setInterval('auto()',1000);
+    $(".scroll").hover(function(){
+        //清除滚动
+        clearInterval(a);
+    },function(){
+        //重新滚动
+        a=setInterval('auto()',1000);
+    })
+    auto();
+})
+function auto(){
+    //top的位移高度尽量和scroll的高度相同，可以很好控制滚动范围
+    $(".scroll ul").animate({"top":"-26px"},2000,function(){
+        //将ul的第一个li加到ul的最后
+        $(".scroll ul").css("top","0px").find("li:first").appendTo('ul');
+    })
+};
+</script>
+</body>
+</html>

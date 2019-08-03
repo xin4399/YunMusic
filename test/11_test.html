@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+			*{margin:0;padding:0;}
+
+			.wrap{width: 140px;padding:10px;}
+        .info{padding-top: 10px;overflow: hidden;}
+        .inner{width: 1000px;height:17px;line-height:17px;overflow: hidden;}
+        .inner .p1{display:inline-block;}
+    </style>
+</head>
+<body>
+<div id="bk4_recommend" class="bk4_recommend">
+	<div class="playlists">
+		<ul>
+			<li class="wrap">
+				<div id="info" class="info">
+					<div class="inner">
+						<p class="p1">歌单介绍歌单介绍歌单介绍歌单介绍歌单介绍歌单介绍歌单介绍！</p>
+					</div>
+				</div>
+				<p>播放量</p>
+			</li>
+			<li class="info">
+				<div class="inner">
+					<p class="p1">歌单介绍歌单介绍歌单介绍歌单介绍歌单介绍歌单介绍歌单介绍！</p>
+					<p>播放量</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<script>
+  var timer;
+    info.onmouseover=function(){
+        var info=document.getElementById("info");
+        var div=info.getElementsByTagName("div")[0];
+        var p=document.getElementsByTagName("p")[0];
+        var p_w=p.offsetWidth;
+        var div_w=info.offsetWidth;
+        if(div_w>p_w){return false;}
+        //div.innerHTML+=div.innerHTML;
+
+        timer=setInterval(function(){
+            if(p_w<=info.scrollLeft){
+                info.scrollLeft-=p_w;
+            }else{
+                info.scrollLeft++;
+            }
+        },30);
+    }
+    
+    info.onmouseout=function(){
+        clearInterval(timer);
+        info.scrollLeft=0;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul{
+            display:flex;
+            list-style:none;
+            border-bottom:1px #aaa solid;
+            
+            
+        }
+        li{
+            margin-right:10px;
+            text-align:center;
+            position: relative;
+           
+            
+        }
+        a{
+            text-decoration:none;
+            color:#333;
+            display:inline-block;
+            width:50px;
+            height:25px;
+            border-bottom:0px rgb(54, 238, 84) solid;
+            
+        }
+        a::before{
+            content:"";
+            width:0px;
+            height:2px;
+            position: absolute;
+            top:25px;
+            left:2px;
+            background-color:aqua;
+            display:inline-block;
+            transition: .3s;
+        }
+        li:hover>a::before{
+            width:100%;  }
+            
+        li:hover>a{color:aquamarine;}
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">qwer</a></li>
+        <li><a href="#">dffgbf</a></li>
+        <li><a href="#">fg</a></li>
+        <li><a href="#">msda</a></li>
+    </ul>
+</body>
+</html>

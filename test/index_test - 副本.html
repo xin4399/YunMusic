@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+  <head>
+		<meta charset="UTF-8">
+	  <title>网易云音乐</title>
+		<style>
+			*{margin:0;padding:0;}
+			body{word-break: keep-all;}
+			ul{list-style:none;}
+			input{border:none;outline:none;}
+			a{text-decoration:none;}
+			
+			
+			
+			.bk4{
+				background-image:linear-gradient(to bottom,#F1F1F1 0%, #FEFEFE 100%);
+			}
+			.bk4_recommend{
+				margin:0 auto;
+				width:1200px;
+			}
+			.bk4_recommend .title{
+				width:200px;
+				text-align:center;
+				margin:0 auto;
+				padding:50px 0 20px;
+				font-size:1.7em;
+				color: #323232;
+				letter-spacing:10px;
+			}
+			.bk4_recommend .recommend_nav{
+				text-align:center;
+				font-size:0.9em;
+				margin-bottom:20px;
+			}
+			.bk4_recommend .recommend_nav>ul{
+				display:flex;
+				justify-content:center;
+			}
+			.bk4_recommend .recommend_nav>ul>li{
+				width:6.7%;
+				line-height:40px;
+			}
+			.bk4_recommend .recommend_nav>ul a{
+				color:#333;
+			}
+			.bk4_recommend .recommend_nav>ul a:hover{
+				color: #f46262;
+			}
+			.bk4_recommend .play_img{
+				display:flex;
+				justify-content:center;
+			}
+			.bk4_recommend .play_img li{
+				width:220px;
+				height:300px;
+				margin: 0 10px 30px;
+				border-radius:15px;
+				overflow:hidden;
+				font-size:0.9em;
+				position:relative;
+				transition:transform .3s;
+			}
+			
+			
+			.bk4_recommend .play_img .play_btn{
+				width:100px;
+				height:100px;
+				background-image:url(iconall.png);
+				background-position:-5px -390px;
+				position:absolute;
+				top:18%;
+				left:28%;
+				transform:scale(0);
+				/*贝塞尔曲线cubic-bezier(<x1>,<y1>,<x2>,<y2>)*/
+				/*曲线两端固定点坐标为(0,0),(1,1).控制点坐标则是(x1,y1),(x2,y2).*/
+				/*x轴取值范围是0~1,超出曲线失效，y轴范围没规定，但不宜过大*/
+				transition:transform .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+			}
+			
+			.bk4_recommend .play_img li>img{
+				width:220px;
+			}
+			.bk4_recommend .text_container{
+				padding-top: 10px;overflow: hidden;
+				
+			}
+			.bk4_recommend .text_container .particular{/*>*/
+				display:inline-block;
+				
+			}
+			.bk4_recommend .count{/*.text_container>*/
+				color:#666;
+				font-size:0.8em;
+
+				
+			}
+/*			.particular{display:inline-block;}*/
+/*			.count{display:inline-block;}*/
+				.xin{width: 1000px;height:172px;height:17px;line-height:17px;overflow: hidden;}
+		</style>
+	</head>
+	<body>
+		<!-- 歌单推荐,板块4 -->
+		<div class="bk4">
+			<div id="bk4_recommend" class="bk4_recommend">
+				<h2 class="title">歌单推荐</h2>
+				<div class="recommend_nav">
+					<ul>
+						<li>
+							<a href="#">为你推荐</a>
+						</li>
+						<li>
+							<a href="#">90年代</a>
+						</li>
+						<li>
+							<a href="#">民谣</a>
+						</li>
+						<li>
+							<a href="#">日韩</a>
+						</li>
+						<li>
+							<a href="#">情歌</a>
+						</li>
+						<li>
+							<a href="#">网络歌曲</a>
+						</li>
+					</ul>
+				</div><!-- nav:导航 -->
+				<div class="playlists">
+					<ul class="play_img">
+						<li>
+							<div class="play_btn"></div>
+							<img src="recommond/303.jpg" alt="">
+							<div class="text_container">
+								
+									<p class="particular">歌单介绍歌单介绍歌单介绍歌单介绍歌单介绍歌单介绍歌单介绍！</p>
+								
+							</div>
+							<p class="count">播放量<span>156.1</span>万</p>
+							
+						</li>
+						<li>
+							<div class="play_btn"></div>
+							<img src="recommond/300.jpg" alt="">
+							<div class="text_container">
+								<div class="xin">
+									<p class="particular">歌单介绍歌单介绍歌单介绍歌单介绍歌单介绍歌单介绍歌单介绍！</p>
+								</div>
+							</div>
+								<p class="count">播放量<span>156.1</span>万</p>
+							
+						</li>
+						<li>
+							<div class="play_btn"></div>
+							<img src="recommond/304.jpg" alt="">
+							<div class="text_container">
+								<div class="xin">
+									<p class="particular">歌单介绍歌单介绍歌单介绍歌单介绍歌单介绍歌单介绍歌单介绍</p>
+								</div>
+							</div>
+								<p class="count">播放量<span>156.1</span>万</p>
+							
+						</li>
+						<li>
+							<div class="play_btn"></div>
+							<img src="recommond/301.jpg" alt="">
+							<div class="text_container">
+								<div class="xin">
+									<p class="particular">歌单介绍歌单介绍歌单介绍歌单介绍歌单介绍歌单介绍歌单介绍</p>
+								</div>
+							</div>
+								<p class="count">播放量<span>156.1</span>万</p>
+							
+						</li>
+						<li>
+							<div class="play_btn"></div>
+							<img src="recommond/302.jpg" alt="">
+							<div id="tst" class="text_container">
+								<div class="xin">
+									<p class="particular">歌单介绍歌单介绍歌单介绍歌单介绍歌单介绍歌单介绍歌单介绍</p>
+								</div>
+							</div>
+								<p class="count">播放量<span>156.1</span>万</p>
+							
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	<script>
+	//要求：鼠标悬停，文字自动滚动显示
+	//1.查找触发事件的元素
+	var timer;
+	var bk4=document.getElementById("bk4_recommend");
+	var playlists=bk4.getElementsByTagName("div")[1];
+	var lis=playlists.getElementsByTagName("li");
+	//2.绑定事件处理函数
+	for(var li of lis){
+		//每遍历一个li，都为其绑定绑定鼠标悬停事件
+		li.onmouseover=function(){
+			var li=this;
+			//查找要修改的元素
+			var txt=li.getElementsByTagName("div")[1];
+			var p=txt.getElementsByTagName("p")[0];
+			var p_w=p.offsetWidth;
+			var txt_w=txt.offsetWidth;
+			
+			//if(txt_w>p_w){return false;}
+			timer=setInterval(function(){
+				//console.log(txt.scrollLeft++);
+				if(p_w<=txt.scrollLeft){
+					txt.scrollLeft-=p_w;
+				}else{
+					txt.scrollLeft++;
+				}
+			},30);
+		}
+		li.onmouseout=function(){
+        clearInterval(timer);
+        this.getElementsByTagName("div")[1].scrollLeft=0;
+    }
+	}
+	//var txts=bk4.getElementsByClassName("text_container");
+	</script>
+	</body>
+</html>
